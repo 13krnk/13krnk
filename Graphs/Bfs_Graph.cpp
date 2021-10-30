@@ -1,5 +1,6 @@
 /**
  * BFS - Breadth first search 
+ * 
  * For connected and Disconncted Graph USing Recursion and itertive.
  * O(V+E)  Time
  * O(V) space
@@ -28,6 +29,8 @@ public:
         //adj[dst].push_back(src);
     }
     
+    // BFs in recursive
+    // here just Util called as separate loop and using queue maintained interanlly for each sibiling
     void BfsUtil(queue<int>q, bool visited[])
     {        
         if(q.empty())
@@ -83,12 +86,15 @@ public:
 int main()
 {
     Graph g(7);
+    g.addEdge(0,1);
+    g.addEdge(0,3);
     g.addEdge(1,3);
-    g.addEdge(2,3);
-    g.addEdge(0,4);
-    g.addEdge(4,5);
-    g.addEdge(5,6);
-  //  g.Bfs_iterative(0);
+    g.addEdge(3,5);
+    g.addEdge(2,4);
+    g.addEdge(4,6);
+    g.addEdge(5,2);
+
+    g.Bfs_iterative(0);
     g.Bfs(0);
     return 0;
 }
