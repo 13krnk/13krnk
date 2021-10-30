@@ -89,8 +89,8 @@ int main()
                       // 2 2
                       // :
                       // 6 1
-    // 0-4-5-6  => connected components in 1 cycle
-    // 1-3 => connected 2nd cycle
-    // 2-3 => 2 no edge connected to 3 so 3rd cycle
+    // 0-4-5-6  => connected components in 1st cycle
+    // 1-3      => connected 2nd cycle
+    // 2-3      => connected in 3rd cycle, no edge connects to 2.
     return 0;
 }
